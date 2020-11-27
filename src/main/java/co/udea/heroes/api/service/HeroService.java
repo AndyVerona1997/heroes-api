@@ -38,6 +38,7 @@ public class HeroService implements HeroServiceInt{
             return posibleHero.get();
         }else {
             log.error("No existe un heroe con ese id");
+            log.error("No existe un heroe con ese id");
             throw new DataNotFoundException(messages.get("exception.data_not_found.hero"));
         }
     }
