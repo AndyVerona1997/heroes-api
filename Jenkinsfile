@@ -3,23 +3,15 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh './gradlew build --scan'
+                sh 'mvn clean install -DskipTest=true'
             }
         }
         
-        stage('sonarqube') {
+        stage('Test') {
             steps {
-                sh './gradlew sonarqube'
+                sh 'mvn test'
             }
         }
         
-        stage('Deploy') {
-            when {
-                branch 'master'
-            }
-            steps {
-                	sh './gradlew artifactoryPublish'
-            }
-        }
     }
 }
