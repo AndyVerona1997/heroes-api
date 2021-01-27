@@ -18,4 +18,5 @@ pipeline {
       sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=fr.demo:my-project -Dsonar.sources=. -Dsonar.java.binaries=."
     }
   }
+  }
 }
