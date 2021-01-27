@@ -11,9 +11,11 @@ pipeline {
                 sh "mvn clean install -DskipTests"
             }
         }
-	stage('SonarQube analysis') {
-    withSonarQubeEnv(credentialsId: 'f225455e-ea59-40fa-8af7-08176e86507a', installationName: 'My SonarQube Server') { // You can override the credential to be used
-      sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.7.0.1746:sonar'
+  stage('SonarQube analysis') {
+    // requires SonarQube Scanner 2.8+
+    def scannerHome = tool 'sonarScanner';//Mismo nombre que pusimos // en el global tool configuration
+    withSonarQubeEnv('sonarExample') { // El nombre de servidor que //pusimos en Configuración del sistema.
+      sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=fr.demo:my-project -Dsonar.sources=. -Dsonar.java.binaries=."
     }
-    }
+  }
 }
