@@ -11,11 +11,6 @@ pipeline {
                 sh "mvn clean install -DskipTests"
             }
         }
-		stage('sonarqube') {
-            steps {
-                sh "mvn sonar:sonar"
-            }
-        }
 		stage('Deploy') {
             when {
                 branch 'master'
