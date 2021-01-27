@@ -16,7 +16,7 @@ pipeline {
                 branch 'master'
             }
             steps {
-                	sh "mvn deploy"
+                	sh "mvn org.apache.maven.plugins:maven-deploy-plugin:3.6.3:deploy"
             }
         }
 	}
