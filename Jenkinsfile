@@ -11,11 +11,6 @@ pipeline {
                 sh "mvn clean install -DskipTests"
             }
         }
-		stage('Test') {
-            steps {
-                sh "mvn test"
-            }
-        }
 		stage('sonarqube') {
             steps {
                 sh "mvn clean sonar:sonar"
