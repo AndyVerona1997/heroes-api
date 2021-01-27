@@ -103,12 +103,12 @@
     <repository>
       <id>central</id>
       <name>8162551e0a26-releases</name>
-      <url>http://192.168.1.3:8081/artifactory/PROYECTO_INTEGRADOR_2</url>
+      <url>http://192.168.1.3:8082/artifactory/PROYECTO_INTEGRADOR_2</url>
     </repository>
     <snapshotRepository>
       <id>snapshots</id>
       <name>8162551e0a26-snapshots</name>
-      <url>http://192.168.1.3:8081/artifactory/PROYECTO_INTEGRADOR_2</url>
+      <url>http://192.168.1.3:8082/artifactory/PROYECTO_INTEGRADOR_2</url>
     </snapshotRepository>
   </distributionManagement>
 </project>
