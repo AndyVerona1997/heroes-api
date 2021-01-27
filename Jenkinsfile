@@ -16,5 +16,13 @@ pipeline {
                 sh "mvn sonar:sonar"
             }
         }
+		stage('Deploy') {
+            when {
+                branch 'master'
+            }
+            steps {
+                	sh "./mvnw deploy"
+            }
+        }
 	}
 }

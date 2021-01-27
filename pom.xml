@@ -91,4 +91,17 @@
       </plugin>
     </plugins>
   </build>
+
+  <distributionManagement>
+    <repository>
+      <id>central</id>
+      <name>8162551e0a26-releases</name>
+      <url>http://localhost:8081/artifactory/PROYECTO_INTEGRADOR_2</url>
+    </repository>
+    <snapshotRepository>
+      <id>snapshots</id>
+      <name>8162551e0a26-snapshots</name>
+      <url>http://localhost:8081/artifactory/PROYECTO_INTEGRADOR_2</url>
+    </snapshotRepository>
+  </distributionManagement>
 </project>
