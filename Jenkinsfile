@@ -6,9 +6,12 @@ pipeline {
     }
 
     stages {
-        stage('Build') {
+        stage('Deploy') {
+            when {
+                branch 'master'
+            }
             steps {
-                sh 'mvn -B -DskipTests clean package'
+                	sh "mvn deploy"
             }
         }
 	}
